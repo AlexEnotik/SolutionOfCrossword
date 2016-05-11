@@ -1,13 +1,27 @@
 #pragma once
+
+#include <string>
+#include <vector>
 #include "Word.h"
-#include <stdio.h>
-class Dictionary : public Word
+
+#define BUFFER_SIZE 64
+
+class Dictionary
 {
-	int m_number;
-	Word* dictionary;
+	
+	std::vector<Word> m_aWordsList;
+	bool LoadDictionary(const char* FileName);
+	
 public:
 	Dictionary();
-	Dictionary(FILE*);
+	Dictionary(const char* FileName);
 	~Dictionary();
-};
 
+	void AddWord(const char* NewWord);
+	void Clear(const int MaxWordLenght);
+	int Size();
+	Word GetWord(int index);
+	char GetChar(int word, int index);
+	bool isFound(int index);
+	void Found(int index);
+};

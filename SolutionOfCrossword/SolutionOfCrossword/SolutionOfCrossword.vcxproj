@@ -146,12 +146,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Crossword.cpp" />
     <ClCompile Include="Dictionary.cpp" />
     <ClCompile Include="Letter.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Word.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Crossword.h" />
     <ClInclude Include="Dictionary.h" />
     <ClInclude Include="Letter.h" />
     <ClInclude Include="Word.h" />

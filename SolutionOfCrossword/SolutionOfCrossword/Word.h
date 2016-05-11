@@ -1,14 +1,16 @@
 #pragma once
-#include "Letter.h"
-class Word : public Letter
+#include <string>
+class Word
 {
-	static int counter;
-	int m_length;
-	Letter* word;
+	std::string m_word;
+	bool m_found;
 public:
+	void Clear();
+	void SetWord(const char*);
+	std::string GetWord();
+	bool IsFound();
+	void Found();
 	Word();
-	Word(char*);
 	~Word();
-	void printWord();
 };
 
